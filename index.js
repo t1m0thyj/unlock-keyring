@@ -14,8 +14,8 @@ const exec = require("@actions/exec");
   capturedOutput = "";
   await exec.exec("bash", ["-c", "dbus-launch --sh-syntax"], options);
   for (const line of capturedOutput.split("\n")) {
-    //const match = line.match(/(\w+)='?(.+?)'?;/);
-    const match = line.match(/(\w+)=(.+?)/);
+    const match = line.match(/(\w+)='?(.+?)'?;/)
+    if (!match) continue;
     core.info(`${match[1]}=${match[2]}`);
     core.exportVariable(match[1], match[2]);
   }
@@ -23,6 +23,7 @@ const exec = require("@actions/exec");
   await exec.exec("bash", ["-c", "echo 'root' | /usr/bin/gnome-keyring-daemon -r -d --unlock"], options);
   for (const line of capturedOutput.split("\n")) {
     const match = line.match(/(\w+)=(.+?)/);
+    if (!match) continue;
     core.info(`${match[1]}=${match[2]}`);
     core.exportVariable(match[1], match[2]);
   }
