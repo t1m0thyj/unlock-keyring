@@ -1,22 +1,22 @@
 {
-  "name": "hello-world-javascript-action",
+  "name": "unlock-keyring",
   "version": "1.0.0",
-  "description": "This action prints \"Hello World\" or \"Hello\" + the name of a person to greet to the log.",
+  "description": "GitHub Action to unlock Gnome keyring daemon",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+    "url": "git+https://github.com/tjohnsonBCM/unlock-keyring.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/actions/hello-world-javascript-action/issues"
+    "url": "https://github.com/tjohnsonBCM/unlock-keyring/issues"
   },
-  "homepage": "https://github.com/actions/hello-world-javascript-action#readme",
+  "homepage": "https://github.com/tjohnsonBCM/unlock-keyring#readme",
   "dependencies": {
     "@actions/core": "^1.1.0",
     "@actions/exec": "^1.0.4"
