@@ -9,7 +9,7 @@ async function execBashCmdAndExportVars(command) {
         capturedOutput += data.toString();
       }
     }
-  }
+  };
   await exec.exec("bash", ["-c", command], options);
   for (const line of capturedOutput.split("\n")) {
     const match = line.match(/^(\w+)='?(.+?)'?;?$/);

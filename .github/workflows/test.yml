@@ -1,0 +1,16 @@
+name: Test
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'releases/*'
+
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: ./
+      - run: python -c "import gnomekeyring; assert not gnomekeyring.get_info_sync(gnomekeyring.get_default_keyring_sync()).get_is_locked()"

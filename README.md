@@ -17,5 +17,5 @@ The time we greeted you. -->
 ## Example usage
 
 ```yaml
-uses: tjohnsonBCM/unlock-keyring@master
+uses: t1m0thyj/unlock-keyring@master
 ```
