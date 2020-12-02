@@ -7,8 +7,9 @@ on: # rebuild any PRs and main branch changes
 
 jobs:
   test: # make sure the action works on a clean machine without building
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-python@v2
       - uses: actions/checkout@v2
       - uses: ./
-      - run: python -c "import gnomekeyring; assert not gnomekeyring.get_info_sync(gnomekeyring.get_default_keyring_sync()).get_is_locked()"
+      - run: python -c "import keyring; keyring.set_password('test', 'user', 'password')"
