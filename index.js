@@ -18,7 +18,7 @@ async function execBashCmdAndExportVars(command) {
 }
 
 (async () => {
-  await exec.exec("sudo apt-get install -qq -y dbus-x11 gnome-keyring");
+  await exec.exec("sudo apt-get install -qq dbus-x11 gnome-keyring");
   await execBashCmdAndExportVars("dbus-launch --sh-syntax");
   await execBashCmdAndExportVars("echo 'root' | /usr/bin/gnome-keyring-daemon -r -d --unlock");
 })().catch((error) => {
