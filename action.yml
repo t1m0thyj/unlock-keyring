@@ -11,3 +11,6 @@ description: 'GitHub Action to unlock Gnome keyring daemon in Ubuntu'
 runs:
   using: 'node12'
   main: 'index.js'
+branding:
+  icon: 'unlock'
+  color: 'yellow'
