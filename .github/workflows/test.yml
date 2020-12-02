@@ -12,4 +12,4 @@ jobs:
       - run: sudo apt-get install -qq python3-keyring
       - uses: actions/checkout@v2
       - uses: ./
-      - run: python -c "import keyring; keyring.set_password('test', 'user', 'password')"
+      - run: python3 -c "import keyring; keyring.set_password('test', 'user', 'password')"
