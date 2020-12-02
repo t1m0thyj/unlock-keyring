@@ -1,6 +1,6 @@
 # Unlock Keyring action
 
-GitHub Action to unlock Gnome keyring daemon
+GitHub Action to unlock Gnome keyring daemon in Ubuntu
 
 <!-- ## Inputs
 
@@ -17,5 +17,5 @@ The time we greeted you. -->
 ## Example usage
 
 ```yaml
-uses: t1m0thyj/unlock-keyring@master
+uses: t1m0thyj/unlock-keyring@v1
 ```

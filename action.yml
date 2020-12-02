@@ -1,5 +1,5 @@
 name: 'Unlock Keyring'
-description: 'GitHub Action to unlock Gnome keyring daemon'
+description: 'GitHub Action to unlock Gnome keyring daemon in Ubuntu'
 # inputs:
 #   who-to-greet:  # id of input
 #     description: 'Who to greet'

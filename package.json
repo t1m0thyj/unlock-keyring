@@ -1,7 +1,7 @@
 {
   "name": "unlock-keyring",
   "version": "1.0.0",
-  "description": "GitHub Action to unlock Gnome keyring daemon",
+  "description": "GitHub Action to unlock Gnome keyring daemon in Ubuntu",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
