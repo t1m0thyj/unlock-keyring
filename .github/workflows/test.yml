@@ -2,8 +2,10 @@ name: Smoke Test
 on: # rebuild any PRs and main branch changes
   pull_request:
   push:
-  schedule:
-    - cron: '0 0 * * *'
+    branches:
+      - master
+      - 'releases/*'
+  workflow_dispatch:
 
 jobs:
   test: # make sure the action works on a clean machine without building
