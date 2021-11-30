@@ -17,7 +17,9 @@ jobs:
       - run: python3 -c "import keyring; keyring.set_password('test', 'user', 'password')"
 
   test-docker: # make sure the action works in a Docker container
-    container: node:lts
+    container:
+      image: node:lts
+      options: --cap-add=IPC_LOCK
     runs-on: ubuntu-latest
     steps:
       - run: apt-get update && apt-get install -qq python3-keyring
