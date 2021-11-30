@@ -20,7 +20,7 @@ jobs:
     container: node:lts
     runs-on: ubuntu-latest
     steps:
-      - run: apt-get install -qq python3-keyring
+      - run: apt-get update && apt-get install -qq python3-keyring
       - uses: actions/checkout@v2
       - uses: ./
       - run: python3 -c "import keyring; keyring.set_password('test', 'user', 'password')"
