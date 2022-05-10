@@ -15,7 +15,8 @@ async function execBashCmdAndExportVars(command) {
 }
 
 (async () => {
-  await exec.exec((process.getuid() !== 0 ? "sudo " : "") + "apt-get install -qq dbus-x11 gnome-keyring --fix-missing");
+  await exec.exec((process.getuid() !== 0 ? "sudo " : "") + "apt-get update -qq");
+  await exec.exec((process.getuid() !== 0 ? "sudo " : "") + "apt-get install -qq dbus-x11 gnome-keyring");
   await execBashCmdAndExportVars("dbus-launch --sh-syntax");
   await execBashCmdAndExportVars("echo '' | /usr/bin/gnome-keyring-daemon --unlock");
 })().catch(core.setFailed);
