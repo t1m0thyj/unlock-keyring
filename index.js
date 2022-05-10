@@ -18,7 +18,7 @@ async function execBashCmdAndExportVars(command) {
   const aptGet = process.getuid() === 0 ? "apt-get" : "sudo apt-get";
   try {
     await exec.exec(`${aptGet} install -qq dbus-x11 gnome-keyring`);
-  } catch (error) {
+  } catch {
     await exec.exec(`${aptGet} update -qq`);
     await exec.exec(`${aptGet} install -qq dbus-x11 gnome-keyring`);
   }
