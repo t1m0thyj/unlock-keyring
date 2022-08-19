@@ -1,6 +1,6 @@
 {
   "name": "unlock-keyring",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GitHub Action to unlock Gnome keyring daemon in Ubuntu",
   "main": "index.js",
   "scripts": {
