@@ -10,6 +10,7 @@ description: 'GitHub Action to unlock Gnome keyring daemon in Ubuntu'
 #     description: 'The time we greeted you'
 runs:
   using: 'node16'
+  pre: 'setup.js'
   main: 'index.js'
 branding:
   icon: 'unlock'
