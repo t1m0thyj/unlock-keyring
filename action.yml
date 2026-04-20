@@ -9,7 +9,7 @@ description: 'GitHub Action to unlock Gnome keyring daemon in Ubuntu'
 #   time: # id of output
 #     description: 'The time we greeted you'
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'bundle.js'
 branding:
   icon: 'unlock'
