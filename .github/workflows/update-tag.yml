@@ -1,0 +1,14 @@
+name: Update latest tag
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  update-tag:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: nowactions/update-majorver@main
